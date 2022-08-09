@@ -11,9 +11,16 @@ function App() {
       <CheckboxGroup
         selected={[1, 3]}
       >
-        <Checkbox>1</Checkbox>
-        <Checkbox>2</Checkbox>
-        <Checkbox>3</Checkbox>
+        {
+          selected => [1, 2, 3].map(value => (
+            <Checkbox
+              key={value}
+              checked={selected.indexOf(value) > -1}
+            >
+              {value}
+            </Checkbox>
+          ))
+        }
       </CheckboxGroup>
     </div>
   )
