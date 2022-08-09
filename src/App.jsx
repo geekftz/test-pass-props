@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import './App.css'
-import Checkbox from "./Checkbox";
 
 import CheckboxGroup from './CheckboxGroup'
 
@@ -9,12 +8,9 @@ function App() {
   return (
     <div className="App">
       <CheckboxGroup
+        group={[1, 2, 3]}
         selected={[1, 3]}
-      >
-        <Checkbox>1</Checkbox>
-        <Checkbox>2</Checkbox>
-        <Checkbox>3</Checkbox>
-      </CheckboxGroup>
+      />
     </div>
   )
 }
